@@ -1,0 +1,46 @@
+{% extends 'tablica/baza.html' %}
+
+{% block content %}
+
+<div class="row my-5">
+	<div class="col-md-2">
+	</div>
+	<div class="post col-md-8">
+		<h3><strong>{{ wpis.title }}</strong></h3>
+		Opublikowano {{ wpis.date| date:"d-m-Y"}}
+		{% if wpis.image %}
+			<img class="img-thumbnail mx-auto d-block pb-1 my-4" src="{{ wpis.image.url }}" height="200" width="550">
+		{% endif %}
+
+		<p class="lead text-justify">{{ wpis.description}}</p>
+		<p class="text-justify">{{ wpis.paragraph}}</p>
+		{% if wpis.image2 %}
+			<img class="img-thumbnail mx-auto d-block pb-1 my-4" src="{{ wpis.image2.url }}" height="200" width="550">
+		{% endif %}
+		{% if wpis.paragraph2 %}
+			<p class="text-justify">{{ wpis.paragraph2}}</p>
+		{% endif %}
+		{% if wpis.image3 %}
+			<img class="img-thumbnail mx-auto d-block pb-1 my-4" src="{{ wpis.image3.url }}" height="200" width="550">
+		{% endif %}
+		{% if wpis.paragraph3 %}
+			<p class="text-justify">{{ wpis.paragraph3}}</p>
+		{% endif %}
+		{% if wpis.image4 %}
+			<img class="img-thumbnail mx-auto d-block pb-1 my-4" src="{{ wpis.image4.url }}" height="200" width="550">
+		{% endif %}
+		{% if wpis.paragraph4 %}
+			<p class="text-justify">{{ wpis.paragraph4}}</p>
+		{% endif %}
+		{% if wpis.image5 %}
+			<img class="img-thumbnail mx-auto d-block pb-1 my-4" src="{{ wpis.image5.url }}" height="200" width="550">
+		{% endif %}
+		{% if wpis.paragraph5 %}
+			<p class="text-justify">{{ wpis.paragraph5}}</p>
+		{% endif %}
+	</div>
+	<div class="col-md-2">
+	</div>
+</div>
+
+{% endblock %}
