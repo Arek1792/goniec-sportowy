@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STATICFILES_DIRS = [
+    '/tablica/static/tablica'
+]
+
 
 # Application definition
 

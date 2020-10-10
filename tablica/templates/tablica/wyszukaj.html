@@ -1,16 +1,18 @@
-{% extends 'tablica/baza.html' %}
+{% extends 'tablica/baza2.html' %}
 
 {% block content %}
 
-{% if wyniki %}
-	<h3 class="my-5">Znaleziono wyniki wyszukiwania:</h3>
-	{% for wynik in wyniki %}
-		<h4><a href="{% url 'wpis' wynik.slug %}">{{ wynik.title }}</a></h4>
-		<p class="text-justify">{{ wynik.description }} </p>
-		<p class="pb-3">{{ wynik.date| date:"d-m-Y" }} </p>
-	{% endfor %}
-{% else %}
-	<h3 class="my-5">Brak wyników</h3>
-{% endif %}
+<main class="container">
+	{% if wyniki %}
+		<h3 class="my-5">Znalezione posty:</h3>
+		{% for wynik in wyniki %}
+			<h4><a href="{% url 'wpis' wynik.slug %}">{{ wynik.title }}</a></h4>
+			<p class="text-justify">{{ wynik.description }} </p>
+			<p class="pb-3">{{ wynik.date| date:"d-m-Y" }} </p>
+		{% endfor %}
+	{% else %}
+		<h3 class="my-5">Brak wyników</h3>
+	{% endif %}
+</main>
 
 {% endblock %}

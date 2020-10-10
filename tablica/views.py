@@ -44,7 +44,7 @@ def wyszukaj(request):
 		#wyniki = Article.objects.all().filter(title=szukaj)
 		wyniki = []
 		for post in Article.objects.all():
-			if szukaj in post.title or szukaj in post.description:
+			if szukaj.lower() in post.title.lower() or szukaj.lower() in post.description.lower():
 				wyniki.append(post)
 		return render(request, 'tablica/wyszukaj.html', {'wyniki': wyniki})
 

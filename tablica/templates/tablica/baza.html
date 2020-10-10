@@ -13,7 +13,9 @@
     <!-- Custom blog font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-    <style> 
+    <link rel="stylesheet" type="text/css" href="{% static 'tablica/custom.css' %}" >
+
+    <!-- <style> 
       body {
         font-family: Roboto;
       }
@@ -32,7 +34,7 @@
           font-size: 3.5rem;
         }
       }
-    </style>
+    </style> -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -46,7 +48,8 @@
 
     <title>Goniec Sportowy</title>
   </head>
-<body>
+
+<body class="bodyStyling">
  <div class="container">
     <div class="blog-header pt-2 pb-4">
       <div class="flex-nowrap justify-content-start align-items-center">
@@ -75,7 +78,7 @@
             <button class="btn btn-dark"><a class="nav-link text-white" href="{% url 'home' %}">Główna</a></button>
           </li>
           <li class="nav-item mx-2 my-1">
-            <button class="btn btn-dark"><a class="nav-link text-white" href="{% url 'redakcja' %}">Redakcja</a></button>
+            <button class="btn btn-dark"><a class="nav-link text-white" href="{% url 'redakcja' %}">O nas</a></button>
           </li>
           <li class="nav-item mx-2 my-1">
             <button class="btn btn-dark"><a class="nav-link text-white" href="{% url 'kontakt' %}">Kontakt</a></button>

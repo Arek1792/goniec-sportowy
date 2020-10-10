@@ -1,15 +1,65 @@
-{% extends 'tablica/baza.html' %}
+{% extends 'tablica/baza2.html' %}
+
+{% load static%}
 
 {% block content %}
 
-<div class="row">
-	<div class="contact-field">
-		<div class='justify-content-end my-5'>
-			<h3 class="pt-5 py-2 pl-4"><strong>Kontakt</strong></h3>
-			<h5 class="py-2 pl-4">Email: <em>goniecsportowykontakt@gmail.com</em></h5>
-			<h5 class="py-2 pl-4">Adres: <em>Zamknięta 10, 30-554 Kraków</em></h5>
+<main class="container">
+	<div class="row">
+		<div class="contact-field col-6">
+			<div class='justify-content-end my-5'>
+				<h3 class="pt-5 py-2 pl-4"><strong>Kontakt</strong></h3>
+				<h5 class="py-2 pl-4">Email: <em>goniecsportowykontakt@gmail.com</em></h5>
+				<h5 class="py-2 pl-4">Adres: <em>Zamknięta 10, 30-554 Kraków</em></h5>
+			</div>
 		</div>
-	</div>
-</div>
+
+		<div class="col-4 pt-5 my-5">
+		  <h4 class="text-center pb-2">Odwiedź nas</h4>
+		  <div class="row pb-3">
+		    <div class="col-6 d-flex justify-content-end">
+		      <a href="https://www.facebook.com/goniecsportowy" target="_blank"><img src="{% static "tablica/fb.png" %}"></a>
+		    </div>
+		    <div class="col-6 d-flex justify-content-start">
+		      <a href=""><img src="{% static "tablica/insta.png" %}"></a>
+		    </div>
+		  </div>
+		  <div class="row">
+		    <div class="col-6 d-flex justify-content-end">
+		      <a href="https://www.youtube.com/channel/UC0LIzETajla6CaCssVLGDyg" target="_blank"><img src="{% static "tablica/yt.png" %}"></a>
+		    </div>
+		    <div class="col-6 d-flex justify-content-start">
+		      <a href=""><img src="{% static "tablica/twitt.png" %}"></a>
+		    </div>
+		  </div>
+		  <h4 class="text-center mt-4 pt-4 pb-2">Partnerzy</h4>
+		  <div class="row mt-2 mb-3">
+		    <div class="col-4">
+		    </div>
+		    <div class="d-flex justify-content-end">
+		      <a href="https://www.1992.com.pl/" target="_blank"><img height=100 width= 150 src="{% static "tablica/1992.jpg" %}"></a>
+		    </div>
+		    <div class="col-4">
+		    </div>
+		  </div>
+		  <div class="row mt-2 mb-3">
+		    <div class="col-4">
+		    </div>
+		    <div class="d-flex justify-content-end">
+		      <a href="https://aplegal.eu/" target="_blank"><img height=100 width= 150 src="{% static "tablica/apl.png" %}"></a>
+		    </div>
+		    <div class="col-4">
+		    </div>
+		  </div>
+		</div>
+
+	<footer class="blog-footer py-5 my-5 pl-4">
+	  <p>Blog built with Django3 & Bootstrap4 <a href="https://getbootstrap.com/"></a> by <a href="https://arek1792.pythonanywhere.com">@arek</a>.</p>
+	  <p>
+	    <a href="#">Powrót do góry</a>
+	  </p>
+	</footer>
+
+</main>
 
 {% endblock %}
